@@ -1,24 +1,39 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { Header } from './src/components/Header/Header'
+import { Footer } from './src/components/Footer/Footer'
+import { renderHome } from './src/pages/Home/Home'
+import { renderFullStack } from './src/pages/FullStack/FullStack'
+import { renderFronted } from './src/pages/Fronted/Fronted'
+import { renderBackend } from './src/pages/Backend/Backend'
+import { renderMarketing } from './src/pages/Marketing/Marketing'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+document.querySelector('header').innerHTML = Header(
+  '/logonuevo-madridhifi.webp'
+)
+const main = document.querySelector('main')
 
-setupCounter(document.querySelector('#counter'))
+const handleClic = (ev) => {
+  ev.preventDefault()
+  const linkHref = ev.target.href
+
+  if (linkHref.includes('home')) {
+    main.innherHTML = renderHome()
+  } else if (linkHref.includes('fullstack')) {
+    main.innherHTML = renderFullStack()
+  } else if (linkHref.includes('fronted')) {
+    main.innherHTML = renderFronted()
+  } else if (linkHref.includes('backend')) {
+    main.innherHTML = renderBackend()
+  } else if (linkHref.includes('marketing')) {
+    main.innherHTML = renderMarketing()
+  }
+}
+
+renderHome()
+
+const pageLinks = document.querySelectorAll('.page-link')
+pageLinks.forEach((pageLink) => pageLink.addEventListener('click', handleClic))
+
+document.querySelector('footer').innerHTML = Footer(
+  '/logonuevo-white-madridhifi.png'
+)

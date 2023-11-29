@@ -1,0 +1,39 @@
+.location-phone {
+  background-color: var(--color-grey);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 14px;
+}
+
+.location {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.phone-number {
+  color: var(--color-black);
+}
+
+.logo-contact-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.contact-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact {
+  color: var(--color-red);
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+.cta {
+  font-size: 14px;
+}
