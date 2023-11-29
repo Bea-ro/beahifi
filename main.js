@@ -2,9 +2,7 @@ import './style.css'
 import { Header } from './src/components/Header/Header'
 import { Footer } from './src/components/Footer/Footer'
 import { renderHome } from './src/pages/Home/Home'
-import { renderFullStack } from './src/pages/FullStack/FullStack'
-import { renderFronted } from './src/pages/Fronted/Fronted'
-import { renderBackend } from './src/pages/Backend/Backend'
+import { renderProjects } from './src/pages/FullStack/FullStack'
 import { renderMarketing } from './src/pages/Marketing/Marketing'
 
 document.querySelector('header').innerHTML = Header(
@@ -19,11 +17,11 @@ const handleClic = (ev) => {
   if (linkHref.includes('home')) {
     main.innherHTML = renderHome()
   } else if (linkHref.includes('fullstack')) {
-    main.innherHTML = renderFullStack()
+    main.innherHTML = renderProjects('fullstack')
   } else if (linkHref.includes('fronted')) {
-    main.innherHTML = renderFronted()
+    main.innherHTML = renderProjects('fronted')
   } else if (linkHref.includes('backend')) {
-    main.innherHTML = renderBackend()
+    main.innherHTML = renderProjects('backend')
   } else if (linkHref.includes('marketing')) {
     main.innherHTML = renderMarketing()
   }
