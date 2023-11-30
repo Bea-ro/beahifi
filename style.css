@@ -8,6 +8,8 @@
   --color-white: #ffffff;
   --color-red: #f5333f;
   --color-grey: #eeeeee;
+  --color-grey-line: #cccccc;
+  --color-grey-text: #b4b4b4;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

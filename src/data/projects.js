@@ -32,7 +32,7 @@ export const projects = [
     category: 'Full Stack',
     description: 'MERN E-commerce.',
     date: 'July 2023',
-    techs: ['React', 'JavaScript', 'CSS3', 'Node', 'Express', 'MongoDB'],
+    techs: ['React', 'JavaScript', 'CSS', 'Node', 'Express', 'MongoDB'],
     requirements: [
       'pair programming',
       'web scrapping',
@@ -48,8 +48,7 @@ export const projects = [
       'https://res.cloudinary.com/dnlceaase/image/upload/v1698689256/projects/server-project_m6r1qr.png',
     name: 'Complete Server',
     category: 'Backend',
-    description:
-      'Server with relational modeling and authentication system | Node, Express, MongoDB.',
+    description: 'Server with relational modeling and authentication system.',
     date: 'June 2023',
     techs: ['Node', 'Express', 'MongoDB'],
     requirements: [
@@ -68,7 +67,7 @@ export const projects = [
       'https://res.cloudinary.com/dnlceaase/image/upload/v1698689255/projects/relational-project_gxu6kn.png',
     name: 'Relational Modeling API',
     category: 'Backend',
-    description: 'Server with relational modeling | Node, Express, MongoDB.',
+    description: 'Server with relational modeling.',
     date: 'June 2023',
     techs: ['Node', 'Express', 'MongoDB'],
     requirements: [
@@ -86,7 +85,7 @@ export const projects = [
       'https://res.cloudinary.com/dnlceaase/image/upload/v1698689253/projects/api-project_bgwhp5.png',
     name: 'API Rest',
     category: 'Backend',
-    description: 'Server with art data | Node, Express, MongoDB.',
+    description: 'Server with art data.',
     date: 'May 2023',
     techs: ['Node', 'Express', 'MongoDB'],
     requirements: [
@@ -102,9 +101,9 @@ export const projects = [
       'https://res.cloudinary.com/dnlceaase/image/upload/v1698689254/projects/games-project_cza7zt.png',
     name: 'Games Hub',
     category: 'Fronted',
-    description: 'Tic, tac, toe, Hangman and Sudoku | React, JavaScript.',
+    description: 'Tic, tac, toe, Hangman and Sudoku.',
     date: 'May 2023',
-    techs: ['React', 'JavaScript', 'CSS3', 'Testing'],
+    techs: ['React', 'JavaScript', 'CSS'],
     requirements: [
       'limit chances',
       'include testing',
@@ -118,9 +117,9 @@ export const projects = [
       'https://res.cloudinary.com/dnlceaase/image/upload/v1698689257/projects/weather-project_qfpb1e.png',
     name: 'Weather App',
     category: 'Fronted',
-    description: 'Fetch to Weather Forecasting API | React, JavaScript.',
+    description: 'Fetch to Weather Forecasting API.',
     date: 'April 2023',
-    techs: ['React', 'JavaScript', 'CSS3'],
+    techs: ['React', 'JavaScript', 'CSS'],
     requirements: [
       'geolocation',
       'navigation with React Router',
@@ -135,9 +134,9 @@ export const projects = [
       'https://res.cloudinary.com/dnlceaase/image/upload/v1698689254/projects/nasa-project_nufb5g.png',
     name: 'The astronomical image of the day',
     category: 'Fronted',
-    description: 'Fetch to NASA API | React, JavaScript.',
+    description: 'Fetch to NASA API',
     date: 'April 2023',
-    techs: ['React', 'JavaScript', 'CSS3'],
+    techs: ['React', 'JavaScript', 'CSS'],
     requirements: [
       'render multimedia content from NASA API',
       'date input',
@@ -152,9 +151,9 @@ export const projects = [
       'https://res.cloudinary.com/dnlceaase/image/upload/v1698689254/projects/portfolio-project_x1wwak.png',
     name: 'Dynamic Portfolio',
     category: 'Fronted',
-    description: 'Dynamic personal portfolio | JavaScript DOM.',
+    description: 'Dynamic personal portfolio.',
     date: 'March 2023',
-    techs: ['JavaScript', 'CSS3'],
+    techs: ['JavaScript', 'CSS'],
     requirements: [
       'dynamic HTML with JavaScript DOM',
       'navigation emulation in a SPA',
@@ -169,9 +168,9 @@ export const projects = [
       'https://res.cloudinary.com/dnlceaase/image/upload/v1698689254/projects/dynamic-shop-project_zinnql.png',
     name: 'Dynamic Shop',
     category: 'Fronted',
-    description: 'Dynamic and responsive shop | JavaScript DOM.',
+    description: 'Dynamic and responsive shop.',
     date: 'February 2023',
-    techs: ['JavaScript', 'CSS3'],
+    techs: ['JavaScript', 'CSS'],
     requirements: [
       'tag templates for a dynamic HTML',
       'loops and iteration',
@@ -187,9 +186,9 @@ export const projects = [
       'https://res.cloudinary.com/dnlceaase/image/upload/v1698689255/projects/responsive-project_viy4zu.png',
     name: 'Responsive Webpage',
     category: 'Fronted',
-    description: 'Responsive webpage | HTML, CSS.',
+    description: 'Responsive webpage.',
     date: 'February 2023',
-    techs: ['HTML5', 'CSS3'],
+    techs: ['HTML', 'CSS'],
     requirements: [
       'semantic elements',
       'use of navbars and lists',

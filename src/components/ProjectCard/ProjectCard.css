@@ -1,0 +1,71 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+
+.code-link {
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+  padding: 4px 6px 4px 8.5px;
+  margin: 20px 15px 10px 0;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.skills-list {
+  pointer-events: none;
+  display: none;
+  border: var(--border-purple);
+  border-radius: 6px;
+  background-color: var(--color-white);
+  margin: 12px 0;
+  padding: 12px 12px 12px 16px;
+  width: 90%;
+  align-self: center;
+}
+
+[class~='show-ev'] {
+  pointer-events: auto;
+  display: block;
+}
+
+.project-img-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-black);
+  font-size: 14px;
+}
+
+.card-info > h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 23px;
+}
+
+.project-img-container {
+  background-color: var(--color-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  max-width: 220px;
+}
+
+.project-img {
+  width: 75%;
+  height: 65%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .skills-list {
+    display: none;
+  }
+}

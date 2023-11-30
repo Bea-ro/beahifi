@@ -1,23 +1,21 @@
 import './FullStack.css'
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard'
+import { Filters } from '../../components/ui/Filters/Filters'
 import { projects } from '../../data/projects'
-// import { skillsToggle } from '../../utils/show-skills-event';
-// import { clearFilter, projectsFilter } from '../../utils/projects-filter';
+import { handleFilter } from '../../utils/projectsFilter'
 
 const main = document.querySelector('main')
 
-//<div class="filter">
-//   <p class="filter-title">Filter by main language:</p>
-//   <div class="filters-and-clear">
-//   ${TechsList}
-//   <button class="clear">Clear</button>
-//   </div>
-//   </div>
-
 export const renderProjects = (category) => {
   main.innerHTML = `
-<h1>projects ${category}</h1>
-<ul>
+<h1 class="category-title">Proyectos ${
+    category === 'fullstack'
+      ? 'Full Stack'
+      : category.charAt(0).toUpperCase() + category.slice(1, category.length)
+  }</h1>
+  <section class="filter-and-projects">
+${Filters}
+  <ul class="projects-list">
 ${projects
   .filter(
     (project) =>
@@ -27,8 +25,16 @@ ${projects
   .map((project) => ProjectCard(project))
   .join('')}
 </ul> 
+</section>
 `
-  //skillsToggle();
-  //   projectsFilter();
-  //   clearFilter();
+
+  const techInputs = document.querySelectorAll('.checkbox')
+
+  techInputs.forEach((techInput) => {
+    techInput.addEventListener('change', handleFilter)
+  })
+
+  document
+    .querySelector('.clear')
+    .addEventListener('click', () => renderProjects(category))
 }
