@@ -22,3 +22,18 @@
   padding: 24px;
   grid-gap: 80px;
 }
+.button-filter {
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
+  .filter-and-projects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button-filter {
+    display: flex;
+    align-self: center;
+  }
+}

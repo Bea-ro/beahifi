@@ -7,11 +7,11 @@ import { Navbar } from '../ui/Navbar/Navbar'
 export const Header = (logoVersion) => `
   <div class="location-phone">
   <figure class="location">
-  <img src="" alt=""/>
+  <img class="header-icon" src="/icons/map.svg" alt="map"/>
   <p>Madrid</p>
   </figure>
   <figure class="phone">
-  <img src="" alt=""/>
+  <img class="header-icon" src="/icons/phone.svg" alt="phone"/>
   <a class="phone-number" href="tel:+34678207035">${phoneFormat(
     personalData.phone
   )}</a>
@@ -19,15 +19,12 @@ export const Header = (logoVersion) => `
   </div>
   
   <div class="logo-contact-cta">
-  ${Logo(logoVersion, 'header-logo')}
-  <input type="search"></input>
-  <img src="" alt=""/>
-  
+  ${Logo(logoVersion, 'header-logo')}  
   <div class="contact-cta">
-  <a class="contact">contáctame</a>
+  <a class="contact" href="mailto:${personalData.mail}">contáctame</a>
   <p class="cta">¡Quiero aportar!</p>
   </div>
-
+  <span class="mobile-menu" id="mobile-menu">\u2630</span>
   </div>
 
 ${Navbar}

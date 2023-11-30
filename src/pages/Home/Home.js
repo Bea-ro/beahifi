@@ -25,4 +25,5 @@ ${personalData.skills
   .join('')}
 </ul>
 `
+  main.id = 'home-main'
 }

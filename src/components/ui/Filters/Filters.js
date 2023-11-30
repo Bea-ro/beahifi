@@ -1,8 +1,9 @@
 import './Filters.css'
+import { Button } from '../Button/Button'
 
 export const Filters = (techs) =>
   `
-<div class="filter">
+<div class="filter" id="filter">
   <div class="filter-label-and-options">
   <label for=${techs} class="filter-label">
     Lenguaje
@@ -24,8 +25,7 @@ export const Filters = (techs) =>
     )
     .join('')}
 </div>
-
-  <button class="clear">Filtro <span>x</span></button>
+${Button('Filtro', 'clear')}
   </div>
   </div>
   `

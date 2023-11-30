@@ -1,5 +1,5 @@
 import { projects } from '../data/projects'
-import { renderProjects } from '../pages/FullStack/FullStack'
+import { renderProjects } from '../pages/Projects/Projects'
 
 export let filteredProjects = [...projects]
 
@@ -24,4 +24,16 @@ export const clearFilter = (category, techInputs) => {
   techInputs.forEach((techInput) => {
     techInput.checked = false
   })
+}
+
+const showFilter = () => {
+  const filter = document.querySelector('.filter')
+  filter.id === 'filter-show'
+    ? (filter.id = 'filter')
+    : (filter.id = 'filter-show')
+}
+
+export const filterToggle = () => {
+  const buttonElement = document.querySelector('.button-filter')
+  buttonElement.addEventListener('click', showFilter)
 }

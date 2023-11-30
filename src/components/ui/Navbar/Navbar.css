@@ -8,3 +8,44 @@ nav {
 nav > a {
   color: var(--color-white);
 }
+
+#mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
+  #mobile-navbar {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1;
+    padding: 12px;
+    min-width: 75%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  nav > a {
+    color: var(--color-black);
+    border-bottom: 1px solid var(--color-grey);
+    padding-bottom: 6px;
+  }
+
+  nav,
+  .contact-cta,
+  .location-phone {
+    display: none;
+  }
+  #mobile-menu {
+    display: flex;
+  }
+  [class~='hide'] {
+    display: none;
+  }
+  [class~='show'] {
+    display: block;
+  }
+}

@@ -5,9 +5,10 @@ import { renderHome } from './src/pages/Home/Home'
 import {
   renderProjects,
   renderProjectsPage
-} from './src/pages/FullStack/FullStack'
+} from './src/pages/Projects/Projects'
 import { renderMarketing } from './src/pages/Marketing/Marketing'
 import { projects } from './src/data/projects'
+import { navbarToggle, showMenu } from './src/utils/navbarToggle'
 
 document.querySelector('header').innerHTML = Header(
   '/logonuevo-madridhifi.webp'
@@ -17,6 +18,8 @@ const main = document.querySelector('main')
 const handleClic = (ev) => {
   ev.preventDefault()
   const linkHref = ev.target.href
+
+  showMenu()
 
   if (linkHref.includes('home')) {
     main.innherHTML = renderHome()
@@ -42,3 +45,5 @@ pageLinks.forEach((pageLink) => pageLink.addEventListener('click', handleClic))
 document.querySelector('footer').innerHTML = Footer(
   '/logonuevo-white-madridhifi.png'
 )
+
+navbarToggle()

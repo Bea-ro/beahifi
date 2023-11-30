@@ -1,7 +1,12 @@
-import './FullStack.css'
+import './Projects.css'
 import { ProjectCard } from '../../components/ProjectCard/ProjectCard'
 import { Filters } from '../../components/ui/Filters/Filters'
-import { clearFilter, handleFilter } from '../../utils/projectsFilter'
+import { Button } from '../../components/ui/Button/Button'
+import {
+  clearFilter,
+  handleFilter,
+  filterToggle
+} from '../../utils/projectsFilter'
 import { projects } from '../../data/projects'
 
 const main = document.querySelector('main')
@@ -30,10 +35,13 @@ export const renderProjectsPage = (category) => {
   }</h1>
   <p class="description"></p>
   <section class="filter-and-projects">
+  ${Button('Filtro', 'button-filter')}
  ${Filters(techs)}
   <ul class="projects-list"></ul> 
 </section>
 `
+  const spanFilter = main.querySelector('span')
+  spanFilter.hidden = true
 
   const techInputs = document.querySelectorAll('.checkbox')
   techInputs.forEach((techInput) => {
@@ -64,4 +72,6 @@ ${projects
   .map((project) => ProjectCard(project))
   .join('')}
 `
+  main.id = 'developer-main'
+  filterToggle()
 }
