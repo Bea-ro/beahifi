@@ -4,6 +4,12 @@
   padding-bottom: 6px;
 }
 
+.description {
+  padding: 10px 0;
+  font-size: 14px;
+  line-height: 1.3em;
+}
+
 .filter-and-projects {
   display: flex;
 }

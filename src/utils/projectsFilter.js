@@ -1,30 +1,27 @@
-export const handleFilter = (ev) => {
+import { projects } from '../data/projects'
+import { renderProjects } from '../pages/FullStack/FullStack'
+
+export let filteredProjects = [...projects]
+
+export const handleFilter = (category) => {
   const techInputs = document.querySelectorAll('.checkbox')
   let selectedTechs = []
-
   techInputs.forEach((techInput) => {
     if (techInput.checked) {
       selectedTechs.push(techInput.value)
     }
   })
 
-  const renderedProjects = [...document.querySelectorAll('.card')]
+  filteredProjects = projects.filter((project) =>
+    selectedTechs.some((tech) => project.techs.includes(tech))
+  )
 
-  renderedProjects.filter((renderedProject) => {
-    const projectText = renderedProject.outerText
-    if (selectedTechs.some((tech) => !projectText.includes(tech))) {
-      renderedProject.remove()
-    }
+  renderProjects(category, filteredProjects)
+}
+
+export const clearFilter = (category, techInputs) => {
+  renderProjects(category, projects)
+  techInputs.forEach((techInput) => {
+    techInput.checked = false
   })
-
-  // const noProjectsMessage = document.createElement('p')
-  // noProjectsMessage.className = 'no-projects-message'
-  // main.append(noProjectsMessage)
-  // if (filteredList.length === 0) {
-  //   document.querySelector('.projects-list').remove()
-  //   noProjectsMessage.innerText =
-  //     'No hay proyectos de ${category} con este lenguage.'
-  // } else {
-  //   noProjectsMessage.remove()
-  // }
 }

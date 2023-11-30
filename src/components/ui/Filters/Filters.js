@@ -1,11 +1,11 @@
 import './Filters.css'
-import { techs } from '../../../data/techs'
 
-export const Filters = `
-  <div class="filter">
+export const Filters = (techs) =>
+  `
+<div class="filter">
   <div class="filter-label-and-options">
-  <label htmlFor=${techs} class="filter-label">
-    Lenguage
+  <label for=${techs} class="filter-label">
+    Lenguaje
   </label>
   ${techs
     .map(
@@ -25,7 +25,7 @@ export const Filters = `
     .join('')}
 </div>
 
-  <button class="clear">x</button>
+  <button class="clear">Filtro <span>x</span></button>
   </div>
   </div>
   `

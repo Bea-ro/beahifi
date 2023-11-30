@@ -16,6 +16,13 @@ h1 {
   font-family: 'Oswald', sans-serif;
 }
 
+.personal-header > p {
+  padding: 10px 0;
+  font-size: 14px;
+  line-height: 1.3em;
+  text-align: center;
+}
+
 .skills {
   display: flex;
   padding: 30px 60px;
